@@ -19,7 +19,7 @@ function useFetchOrders() {
             const sellingAmount = Number(order.sellingAmount);
             const buyingAmount = Number(order.buyingAmount);
             return {
-                id: index,
+                id: Number(order.id),
                 type: 'Green',
                 trader: order.trader,
                 greenAmount: isNaN(sellingAmount) ? 0 : sellingAmount,
@@ -41,7 +41,7 @@ function useFetchOrders() {
             const sellingAmount = Number(order.sellingAmount);
             const buyingAmount = Number(order.buyingAmount);
             return {
-                id: index,
+                id: Number(order.id),
                 type: 'Orange',
                 trader: order.trader,
                 greenAmount: isNaN(buyingAmount) ? 0 : buyingAmount,
@@ -79,7 +79,7 @@ const OrderBook = () => {
           <tbody>
             {[...ordersA4B, ...ordersB4A].map((order, index) => (
                 <tr key={index} className={order.type === 'Green' ? 'bg-green-200' : 'bg-orange-200'}>
-                    <td className="border px-4 py-2">{index}</td>
+                    <td className="border px-4 py-2">{order.id}</td>
                     <td className="border px-4 py-2">{order.trader}</td>
                     <td className="border px-4 py-2">{order.greenAmount}</td>
                     <td className="border px-4 py-2">{order.orangeAmount}</td>
