@@ -8,7 +8,8 @@ import { Address } from "viem";
 import { useContractRead } from "wagmi";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { useAnimationConfig } from "~~/hooks/scaffold-eth";
-import { notification } from "~~/utils/scaffold-eth";
+
+// import { notification } from "~~/utils/scaffold-eth";
 
 type DisplayVariableProps = {
   contractAddress: Address;
@@ -33,9 +34,9 @@ export const DisplayVariable = ({
     address: contractAddress,
     functionName: abiFunction.name,
     abi: abi,
-    onError: error => {
-      // notification.error(error.message);
-    },
+    // onError: error => {
+    //   // notification.error(error.message);
+    // },
   });
 
   const { showAnimation } = useAnimationConfig(result);

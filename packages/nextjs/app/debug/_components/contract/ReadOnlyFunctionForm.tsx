@@ -13,7 +13,8 @@ import {
   getParsedContractFunctionArgs,
   transformAbiFunction,
 } from "~~/app/debug/_components/contract";
-import { getParsedError, notification } from "~~/utils/scaffold-eth";
+
+// import { getParsedError, notification } from "~~/utils/scaffold-eth";
 
 type ReadOnlyFunctionFormProps = {
   contractAddress: Address;
@@ -37,10 +38,10 @@ export const ReadOnlyFunctionForm = ({
     abi: abi,
     args: getParsedContractFunctionArgs(form),
     enabled: false,
-    onError: (error: any) => {
-      const parsedErrror = getParsedError(error);
-      // notification.error(parsedErrror);
-    },
+    // onError: (error: any) => {
+    //   const parsedErrror = getParsedError(error);
+    //   // notification.error(parsedErrror);
+    // },
   });
 
   const transformedFunction = transformAbiFunction(abiFunction);
