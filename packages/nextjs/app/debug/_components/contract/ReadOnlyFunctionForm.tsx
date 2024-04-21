@@ -39,7 +39,7 @@ export const ReadOnlyFunctionForm = ({
     enabled: false,
     onError: (error: any) => {
       const parsedErrror = getParsedError(error);
-      notification.error(parsedErrror);
+      // notification.error(parsedErrror);
     },
   });
 

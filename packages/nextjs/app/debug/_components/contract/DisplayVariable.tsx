@@ -34,7 +34,7 @@ export const DisplayVariable = ({
     functionName: abiFunction.name,
     abi: abi,
     onError: error => {
-      notification.error(error.message);
+      // notification.error(error.message);
     },
   });
 
