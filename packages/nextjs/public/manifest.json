@@ -1,5 +1,5 @@
 {
-  "name": "Scaffold-ETH 2 DApp",
-  "description": "A DApp built with Scaffold-ETH",
-  "iconPath": "logo.svg"
+  "name": "NeoNexus",
+  "description": "A fully on-chain Order Book",
+  "iconPath": "logo.png"
 }
